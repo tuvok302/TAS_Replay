@@ -1,26 +1,34 @@
 # ARDUINO TAS REPLAY DEVICE
 
-This contains the code to load onto the arduino after the hardware has been setup and configured to use 
-this.  Contains the serial transfer code to transfer files from a windows desktop, as well as the 
-writeup document.  This assumes you already have the cable necessary to connect your arduino to your 
-console, and can use the scripts in 
-https://github.com/dwangoac/TASBot-Projects/tree/master/Dump_Scripts to generate .r16m and .r08 files.  
-For further information on those, please check in writeup/tex/TASReplay.tex and compile it into a PDF.  
-NESTASReplay.png and SNESTASReplay.png have the wiring information for the NES and SNES controller 
-cables respectively.  
+Included:
+
+- Code to load onto the arduino once it has been configured to use it
+- The serial transfer code to transfer files from a Windows desktop 
+- The writeup document
+
+Required:
+
+- A cable to connect your arduino to your console
+- The scripts to generate .r16m and .r08 files found [here](https://github.com/dwangoac/TASBot-Projects/tree/master/Dump_Scripts)
+
+*For further information, compile writeup/tex/TASReplay.tex as a PDF 
+or check NESTASReplay.png or SNESTASReplay.png for wiring information for the respective NES and SNES 
+controller cables.*
 
 ## Getting started
 
-Open the .ino file in the arduino IDE and upload to the arduino.  Everything was designed to run on an 
-arduino uno or uno clone.  
+*NOTE: Everything has been designed to run on an Arduino Uno or an Uno clone.*
 
-Compile tasSerialTransfer after updating the COM port in main.cpp, and for NES playback:
+1. Open the .ino file in the arduino IDE and upload to the Arduino.
+
+2. Compile tasSerialTransfer after updating the COM port in main.cpp
+> For NES Playback:
 ```
 tasSerialTransfer.exe "LOCATION OF .r08 file" NES
 ```
-for SNES playback:
+> For SNES playback:
 ```
 tasSerialTransfer.exe "LOCATION OF .r16m file" SNES
 ```
 
-Sit back and watch your game of choice beat itself!
+3. Sit back and watch your game of choice beat itself!
